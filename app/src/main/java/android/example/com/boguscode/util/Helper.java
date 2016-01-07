@@ -5,20 +5,11 @@ package android.example.com.boguscode.util;
 import android.content.Context;
 import android.example.com.boguscode.util.API.APIService;
 import android.widget.Toast;
-
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
-import java.text.NumberFormat;
 import java.util.concurrent.TimeUnit;
-
 import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
 
-/**
- * Created by benjamin on 1/6/16.
- */
 public class Helper {
 
     private static String BASE_URL = "https://api.vimeo.com/";
