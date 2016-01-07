@@ -5,19 +5,24 @@
                 tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:id="@+id/title_wrapper"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="8dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="All the videos have been hand picked by our staff!"/>
+            android:text="All the videos have been hand picked by our staff!" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/activity_main_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_wrapper"/>
 
 </RelativeLayout>
