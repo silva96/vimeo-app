@@ -24,9 +24,7 @@ public class Helper {
     private static String BASE_URL = "https://api.vimeo.com/";
 
     public static APIService service(){
-        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(HttpLoggingInterceptor.Level.NONE); //Change NONE for BODY if you want to see full log
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(logging).build();
+        OkHttpClient client = new OkHttpClient.Builder().build();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
