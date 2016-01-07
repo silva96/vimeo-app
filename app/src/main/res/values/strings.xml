@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BogusCode</string>
     <string name="activity_main_title">Vimeo Staf Pics</string>
+    <string name="error_fetching_videos">Oops, there was an error while fetching videos</string>
+    <string name="loading">Fetching videos ...</string>
 
 </resources>

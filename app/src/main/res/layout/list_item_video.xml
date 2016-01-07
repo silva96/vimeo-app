@@ -1,22 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="horizontal"
-              android:padding="8dp">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/video_thumbnail"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <ImageView
+                android:id="@+id/video_image"
+                android:layout_width="100dp"
+                android:layout_height="56dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/video_duration"
+                android:layout_alignRight="@id/video_image"
+                android:background="@color/alphablack"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:shadowRadius="2"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="4"
+                android:textColor="@color/white"
+                android:layout_alignBottom="@+id/video_image"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/video_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/video_image"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingLeft="8dp"/>
+            <TextView
+                android:id="@+id/video_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/video_image"
+                android:layout_below="@id/video_title"
+                android:textSize="12sp"
+                android:paddingLeft="8dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_bar_infinite_scroll_wrapper"
+                android:layout_below="@id/video_image"
+                android:visibility="gone">
+                <ProgressBar
+                    android:id="@+id/progress_bar_infinite_scroll"
+                    style="?android:attr/progressBarStyleSmallInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
 
-    <TextView
-        android:id="@+id/list_item_video_name_textview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="15dp"
-        android:textSize="16sp"/>
+
+        </RelativeLayout>
 </LinearLayout>
